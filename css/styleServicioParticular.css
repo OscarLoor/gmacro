@@ -1,0 +1,88 @@
+#contenidoPrincipal h1 {
+    text-transform: uppercase;
+    color: #00574F;
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 50px;
+}
+
+#contenidoPrincipal h2 {
+    color: #00574F;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#contenidoSuperior #objetivos p {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#contenidoSuperior #objetivos ul {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.nav-tabs>li.active>a {
+    background-color: #ededed;
+    border: none;
+    border-radius: 7px 0 0 0 !important;
+    margin: 0px !important;
+}
+
+.nav-tabs>li>a {
+    background-color: #00574F;
+    color: #fff !important;
+    border-radius: 0 !important;
+    margin: 0px;
+}
+
+.tab-content {
+    background-color: #ededed;
+    border-radius: 0 7px 7px 7px !important;
+    padding: 25px;
+}
+
+div#contenidoInferior {
+    margin-bottom: 40px;
+}
+
+.nav-tabs>li {
+    margin-bottom: 0px;
+    height: 37px;
+}
+
+.panel-heading {
+    text-transform: uppercase;
+    background-color: #00574F !important;
+    color: #fff !important;
+}
+
+.panel-heading a:hover{
+    text-decoration: none;
+}
+
+div#imagenPrincipal {
+    text-align: center;
+}
+@media(max-width:767px){
+    .nav-tabs>li {
+        clear: left;
+       width: 100%;
+    }   
+}
+
+#contenidoPrincipal h2 {
+    margin-top: 30px;
+}
+
+#objetivos li::before {
+    content: ''; /* FontAwesome char code inside the '' */
+  font-family: FontAwesome; /* FontAwesome or whatever */
+  display: inline-block;
+  width: 1.2em; /* same as padding-left set on li */
+  margin-left: -1.2em; /* same as padding-left set on li */
+}
+
+#objetivos li{
+    list-style: none;
+}
