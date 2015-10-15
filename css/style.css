@@ -1,0 +1,260 @@
+.contenedorDos {
+    margin-top: 48px;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+/*Menu*/
+.navbar {
+    margin-bottom: 10px !important;
+}
+
+.nav.navbar-nav {
+    float: right !important;
+}
+
+.nav {
+    text-transform: uppercase;
+}
+
+.nav .active a {
+    color: #00574F !important;
+    border-bottom: 4px solid #00574F;
+}
+
+.nav a {
+    color: #6A6161 !important;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-right: 2px;
+    font-size: 13px;
+}
+
+.nav a:hover {
+    background-color: #fff !important;
+    color: #00574F !important;
+    
+}
+
+.navbar-brand {
+	padding: 10px 0px !important;
+}
+
+.navbar-brand img {
+    width: 206px;
+}
+@media(min-width:1200px){
+	.dropdown-menu {
+	    width: 229px !important;
+	}
+}
+@media(max-width:1200px){
+	.navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+	
+    .nav.navbar-nav {
+	    text-align: right;
+	    width: 100%;
+	}
+
+	.nav .dropdown-menu {
+	    width: 100%;
+	}
+
+	.dropdown a {
+	    text-align: right !important;
+	}
+}
+/*Footer*/
+#desarrollado {
+    font-size: 12px !important;
+}
+
+#footer {
+    background-color: #00574F;
+    color: #fff !important;
+    padding: 25px 0px;
+}
+#footer .alineadoDerecha{
+	text-align: right;
+}
+
+#footer #redesSociales i {
+    color: #00574F !important;
+    background-color: rgb(255, 255, 255);
+}
+
+#desarrollado a{
+    color: #fff;
+}
+
+#footer #redesSociales i{
+	color: #fff;
+}
+
+#footer .alineadoDerecha span {
+    font-weight: bold;
+}
+
+#footer .fa-facebook {
+    padding: 13px 17px;
+    border-radius: 35px;
+    font-size: 20px;
+}
+
+#footer .fa-twitter {
+    padding: 13px 13px;
+    border-radius: 35px;
+    font-size: 20px;
+}
+
+#redesSociales i{
+	background-color: #fff;
+	-webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+#redesSociales i:hover{
+	background-color: #C0C0C0 !important;
+}
+@media(max-width:992px){
+	#footer {
+	    text-align: center !important;
+	}
+
+	#footer .alineadoDerecha {
+	    text-align: center !important;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	}
+}
+/*Carousel - Banner Animado*/
+#myCarousel {
+    background-color: #00574F;
+}
+
+#slider {
+    background-color: #00574F;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-inner{
+	text-align: center;
+}
+
+.carousel img {
+    margin: auto;
+}
+
+/*Contenido Principal Seccion Inicio*/
+#contenidoPrincipal h2 {
+    color: #565656;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#contenidoPrincipal h2 span {
+    color: #00574F !important;
+    font-weight: bold;
+}
+
+#clientes {
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 95%;
+    max-width: 509px;
+}
+
+#contenidoPrincipal .fa {
+    margin-right: 10px;
+    width: 15px;
+}
+#gamificando {
+    width: 100%;
+    max-width: 158px;
+}
+
+#parrafoServicios {
+    margin-bottom: 40px;
+}
+
+#contenidoPrincipal p {
+    font-size: 20px;
+}
+#ejecutivoDos {
+    width: 100%;
+    max-width: 360px;
+}
+#ejecutivoDos {
+    position: relative;
+}
+@media(max-width:992px){
+	#porqueElegirnos {
+	    text-align: center;
+	}
+}
+
+/*Bootstrap Cambios*/
+
+@media(max-width:767px){
+
+}
+
+@media(max-width:992px){
+
+}
+
+@media(min-width:768px){
+
+}
+@media(min-width:992px){
+       
+}
+@media(max-width:1200px){
+
+}
+@media(min-width:1200px){
+}
