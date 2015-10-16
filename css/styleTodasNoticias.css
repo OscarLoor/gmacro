@@ -75,3 +75,30 @@ div#leerMasNoticia {
     height: 5px;
     margin-left: 15px;
 }
+
+div#noticias {
+    background: url('../img/oficinaModificada.jpg');
+    text-align: center;
+    color: #fff;
+}
+
+#noticias h1 {
+    font-weight: bold;
+}
+
+#noticias p {
+    font-size: 15px;
+}
+
+div#noticias {
+    padding: 50px 0px;
+}
+
+div#noticias {
+    margin-bottom: 20px;
+}
+
+div#contenidoEntrada {
+    padding: 0px 45px;
+    margin-bottom: 40px;
+}
