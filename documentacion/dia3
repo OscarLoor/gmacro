@@ -1,0 +1,95 @@
+Inicio 9:30pm
+Termine:
+
+Con el siguiente codigo creo un archivo .php el cual me permite ver lo que se mostrará a partir del creador de páginas de wordpress, también se puede ingresar una imagen principal, pero en la maquetación no mezclar con el contenido
+
+<?php
+/*
+Template Name: Pagina
+*/
+?>
+<html>
+<head>
+</head>
+<body>
+</body>
+<h1><?php echo wp_title(''); ?></h1>
+<div id="contenidoPrincipalPagina">
+<?php 
+if (have_posts()) :
+   while (have_posts()) :
+      the_post();
+      the_content();
+   endwhile;
+endif;
+?>
+</div>
+</html>
+
+Si quiero tener un tab horizontal y dentro un accordion
+<div id="contenidoInferior" class="row">
+				<div class="col-md-12">
+					
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						<li><a href="#profile" data-toggle="tab">Profile</a></li>
+						<li><a href="#messages" data-toggle="tab">Messages</a></li>
+						<li><a href="#settings" data-toggle="tab">Settings</a></li>
+					</ul>
+					
+					<div class="tab-content">
+						<div id="home" class="tab-pane active">
+							<div id="accordion" class="panel-group">
+							
+							<div class="panel panel-default">
+								<div id="headingOne" class="panel-heading">
+									<h4 class="panel-title"><a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">				<i class="fa fa-mouse-pointer"></i> Collapsible Group Item #1
+									</a></h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven’t heard of them accusamus labore sustainable VHS.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div id="headingTwo" class="panel-heading">
+									<h4 class="panel-title"><a class="collapsed" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">
+									<i class="fa fa-mouse-pointer"></i> Collapsible Group Item #2
+									</a></h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven’t heard of them accusamus labore sustainable VHS.</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div id="headingThree" class="panel-heading">
+									<h4 class="panel-title"><a class="collapsed" href="#collapseThree" data-toggle="collapse" data-parent="#accordion">
+									<i class="fa fa-mouse-pointer"></i> Collapsible Group Item #3
+									</a></h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+									<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven’t heard of them accusamus labore sustainable VHS.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="profile" class="tab-pane">Contenido Dos</div>
+					<div id="messages" class="tab-pane">Conteindo Tres</div>
+					<div id="settings" class="tab-pane">Contenido Cuatro</div>
+				</div>
+			</div>
+		</div>
+
+Para cambiar el icono de lista con uno de fontawesome
+
+#objetivos li::before {
+    content: ''; /* FontAwesome char code inside the '' */
+  font-family: FontAwesome; /* FontAwesome or whatever */
+  display: inline-block;
+  width: 1.2em; /* same as padding-left set on li */
+  margin-left: -1.2em; /* same as padding-left set on li */
+}
+
+#objetivos li{
+    list-style: none;
+}

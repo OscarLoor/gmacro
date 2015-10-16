@@ -1,0 +1,198 @@
+Inicio: 10:36am
+Termino: 12:30
+
+Ininio: 8pm
+Termine: 
+Para mostrar todas las entradas.
+
+1)Se toma el diseño de index.php, con el siguiente loop
+
+<h1><?php echo wp_title(''); ?></h1>
+<div id="contenidoPrincipalPagina">
+ <!-- Start the Loop. -->
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+ 	<!-- Display the Title as a link to the Post's permalink. -->
+
+ 	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	<?php if ( has_post_thumbnail() ) {
+		the_post_thumbnail();
+	}?>
+
+ 	<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+
+ 	<small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
+
+
+ 	<!-- Display the Post's content in a div box. -->
+
+ 	<div class="entry">
+ 		<?php the_excerpt();  ?>
+ 		<a href="<?php echo get_permalink(); ?>"> Read More...</a>
+ 	</div>
+
+
+ 	<!-- Display a comma separated list of the Post's Categories. -->
+
+ 	<p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
+ 	</div> <!-- closes the first div box -->
+
+
+ 	<!-- Stop The Loop (but note the "else:" - see next line). -->
+
+
+
+
+ <?php endwhile; else : ?>
+
+
+ 	<!-- The very first "if" tested to see if there were any Posts to -->
+ 	<!-- display.  This "else" part tells what do if there weren't any. -->
+ 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+
+ 	<!-- REALLY stop The Loop. -->
+ <?php endif; ?>
+ 
+ <?php next_posts_link('&laquo; Older Entries') ?>
+<?php previous_posts_link('Newer Entries &raquo;') ?>
+</div>
+
+2) Se configura desde el menu de wordpress en Lectura y ahi selecciono las opciones como cual será la página que muestre eso, el numero de entradas, si se muestra un resumen o no
+
+Single.php es la página que muestra un post en singular
+
+Para mostrar
+
+<h1><?php echo wp_title(''); ?></h1>
+<div id="contenidoPrincipalPagina">
+
+ <!-- Start the Loop. -->
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+ 	<!-- Display the Title as a link to the Post's permalink. -->
+
+	<?php if ( has_post_thumbnail() ) {
+		the_post_thumbnail();
+	}?>
+
+ 	<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+
+ 	<small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
+
+
+ 	<!-- Display the Post's content in a div box. -->
+
+ 	<div class="entry">
+ 		<?php the_content();  ?>
+
+ 	</div>
+
+
+ 	<!-- Display a comma separated list of the Post's Categories. -->
+
+
+ 	</div> <!-- closes the first div box -->
+
+
+ 	<!-- Stop The Loop (but note the "else:" - see next line). -->
+
+
+
+
+ <?php endwhile; else : ?>
+
+
+ 	<!-- The very first "if" tested to see if there were any Posts to -->
+ 	<!-- display.  This "else" part tells what do if there weren't any. -->
+ 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+
+ 	<!-- REALLY stop The Loop. -->
+ <?php endif; ?>
+
+</div>
+
+
+
+
+Formulario de Contacto - Contact Form 7
+
+Codigo inicial
+<p>Nombre (requerido)<br />
+    [text* your-name] </p>
+
+<p>Teléfono (requerido)<br />
+[number* numero] </p>
+
+<p>Correo electrónico (requerido)<br />
+    [email* your-email] </p>
+
+<p>Asunto<br />
+    [text your-subject] </p>
+
+<p>Mensaje<br />
+    [textarea your-message] </p>
+
+<p>[submit "Enviar"]</p>
+
+Codigo de Mensaje
+
+De: [your-name] <[your-email]>
+Teléfono: [numero]
+
+Asunto: [your-subject]
+
+Cuerpo del mensaje:
+[your-message]
+
+El codigo html que genera es
+
+<h1>  Formulario de Contacto</h1>
+<div id="contenidoPrincipalPagina">
+<div role="form" class="wpcf7" id="wpcf7-f73-p74-o1" lang="es-ES" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/formulario-de-contacto/#wpcf7-f73-p74-o1" method="post" class="wpcf7-form" novalidate="novalidate" _lpchecked="1">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="73">
+<input type="hidden" name="_wpcf7_version" value="4.3">
+<input type="hidden" name="_wpcf7_locale" value="es_ES">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f73-p74-o1">
+<input type="hidden" name="_wpnonce" value="c08d380948">
+</div>
+<p>Nombre (requerido)<br>
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;"></span> </p>
+<p>Teléfono (requerido)<br>
+<span class="wpcf7-form-control-wrap numero"><input type="tel" name="numero" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false"></span> </p>
+<p>Correo electrónico (requerido)<br>
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </p>
+<p>Asunto<br>
+    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span> </p>
+<p>Mensaje<br>
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </p>
+<p><input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit"></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+</div>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script><span class="_hsShareImage hsShareImage">&nbsp;</span>
+
+
+Codigo para cambiar la apariencia de los inputs y el focus
+
+input, textarea{
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    color: #fff;
+    background-color: #00574F;
+    padding: 2px 55px;
+}
+
+input:focus, textarea:focus { 
+    border: 2px solid #00574F;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 5px;
+}
