@@ -5,10 +5,35 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
-/*Menu*/
-.navbar {
-    margin-bottom: 10px !important;
+
+input, textarea{
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
 }
+
+input[type=submit] {
+    color: #fff;
+    background-color: #00574F;
+    padding: 2px 55px;
+}
+
+input:focus, textarea:focus { 
+    border: 2px solid #00574F;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 5px;
+}
+    
+/*Menu*/
+#header .nav .open>a,#header .nav .open>a:focus, #header .nav .open>a:hover
+,#header .nav>li>a:focus, #header .nav>li>a:hover {
+    background-color: #00574F !important;
+    color: #fff !important;
+}
+
+
+
 
 .nav.navbar-nav {
     float: right !important;
