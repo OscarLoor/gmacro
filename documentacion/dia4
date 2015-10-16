@@ -178,15 +178,17 @@ El codigo html que genera es
 
 Codigo para cambiar la apariencia de los inputs y el focus
 
-input, textarea{
-    border: 2px solid #e4e4e4;
+input, textarea {
+    border: 2px solid #E4E4E4;
     border-radius: 5px;
+    width: 100%;
 }
 
 input[type=submit] {
     color: #fff;
     background-color: #00574F;
-    padding: 2px 55px;
+    padding: 2px 5%;
+    width: 50%;
 }
 
 input:focus, textarea:focus { 

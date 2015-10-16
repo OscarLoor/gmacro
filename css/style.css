@@ -6,15 +6,17 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-input, textarea{
-    border: 2px solid #e4e4e4;
+input, textarea {
+    border: 2px solid #E4E4E4;
     border-radius: 5px;
+    width: 100%;
 }
 
 input[type=submit] {
     color: #fff;
     background-color: #00574F;
-    padding: 2px 55px;
+    padding: 2px 5%;
+    width: 50%;
 }
 
 input:focus, textarea:focus { 
@@ -69,6 +71,48 @@ input:focus, textarea:focus {
 .navbar-brand img {
     width: 206px;
 }
+
+
+#tituloPrincipal {
+    height: 300px;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 94px 0px 0px;
+
+}
+#contenedorCirculoFoto {
+    margin-bottom: 40px;
+    text-align: center;
+}
+#circuloFoto {
+    margin-top: -44px;
+}
+.noticiaFoto{
+        background: transparent url("../img/oficinaModificada.jpg") repeat scroll center center / cover;
+}
+
+.contactoFoto{
+        background: transparent url("../img/oficina.jpg") repeat scroll center center / cover;
+}
+
+
+#tituloPrincipal h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+@media(max-width: 767px){
+    #tituloPrincipal h1 {
+        font-size: 30px;
+    }
+
+    #tituloPrincipal {
+        height: 183px;
+        padding: 25px 0px 0px;
+    }
+}
+
 @media(min-width:1200px){
 	.dropdown-menu {
 	    width: 229px !important;
@@ -178,6 +222,30 @@ input:focus, textarea:focus {
 #redesSociales i:hover{
 	background-color: #C0C0C0 !important;
 }
+
+#contenedorFooterInformacion {
+    padding: 0px;
+}
+
+#googleMapFooter {
+    padding: 0px;
+    width: 50%;
+}
+
+#informacionFooter {
+    display: table;
+    height: 300px;
+    background: transparent url("../img/oficina.jpg") repeat scroll center center / cover;
+    width: 50%;
+}
+
+#simulacionCelda {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
 @media(max-width:992px){
 	#footer {
 	    text-align: center !important;
@@ -256,6 +324,10 @@ input:focus, textarea:focus {
 #ejecutivoDos {
     position: relative;
 }
+#contenidoPrincipal h2 {
+    color: #00574F;
+}
+
 @media(max-width:992px){
 	#porqueElegirnos {
 	    text-align: center;

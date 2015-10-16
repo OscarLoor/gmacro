@@ -1,19 +1,4 @@
-Inicio 2:04pm
-Termine:
-
-Instalación de Google Maps
-
-Ingreso en, y busco la get a key
-https://developers.google.com/maps/documentation/javascript/
-
-Creo una clave para un dominio en particular y genero la clave
- AIzaSyC0r0JXuJTjfpr3ZhXLmoaZyGQ00BRS7Rc 
-
- Clave para realizar pruebas fuera del dominio 
- AIzaSyBggzMzBJgMg3k86bxBnZTzwxr9vTCFJ4s
-
- creamos un archivo .js con
- //variables globales map
+//variables globales map
 document.body.addEventListener("load", iniciarGoogleMap());
 
 var map;
@@ -57,6 +42,7 @@ function crearMapa(){
           var mapOptions = {
           center: new google.maps.LatLng(-0.140825, -78.469967),
           zoom: 17,
+          scrollwheel: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         
@@ -80,48 +66,3 @@ function crearMarcador(icono,titulo,mensaje, posicion){
         google.maps.event.addListener(marcador,'click', function(){ mensajeMarcador.open(map,marcador);} );
 }
       google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-
-Despues agregamos este archivo al final del documento dentro de body
-
-Agregamos las siguientes lineas dentro del body donde queremos que se muestre, no olvidar cambiar la key
-	<!--Google Map, cambiar la key-->
-	<script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBggzMzBJgMg3k86bxBnZTzwxr9vTCFJ4s&sensor=TRUE&language=es&region=EC">
-    </script>
-
-	<div id="googleMapContacto" class="container-fluid">
-			<div class="row">
-					<div id="map_canvas" style="width:100%; height:400px"></div>
-			</div>
-	</div><!--googleMapContacto-->
-
-
-Datos de contacto
-
-<div class="col-md-6">
-	<h2>Datos de Contacto</h2>
-	<p><i class="fa fa-map-marker"></i> El día N37-111 y El Mercurio, Quito</p>
-	<p><i class="fa fa-phone"></i> PBX Ecuador (593 2) 224 01 79<br>(593 2)2 255 942</p>	
-	<p><i class="fa fa-envelope"></i> info@gmacro.com</p>
-	<p><i class="fa fa-skype"></i> gerencia-ecuador</p>
-	<p><i class="fa fa-clock-o"></i> Lunes - Viernes 9:00 - 18:00</p>
-
-</div>
-
-Para centrar elementos
-
-#informacionFooter {
-    display: table;
-    height: 300px;
-}
-
-#simulacionCelda {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-
