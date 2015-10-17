@@ -126,7 +126,7 @@ Para centrar elementos
 
 ******************************************************************************************************************
 Inicio: 17:48
-Termine:
+Termine: 8pm
 
 Creo el archivo del header
 header.php 
@@ -141,7 +141,7 @@ Para el titulo
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" /> 
 <title>Estylos y Flores |<?php echo wp_title();?></title>
 
-Para las imagenes
+Para las imagenes y css, js
 <?php echo get_template_directory_uri();?>/img/logo.png
 
 
@@ -384,4 +384,13 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
   }
 }
 
+Para la creacion de footer.php
 
+<?php 
+  wp_footer(); 
+?>
+
+
+Para obtener el footer
+
+<?php get_footer();?>
